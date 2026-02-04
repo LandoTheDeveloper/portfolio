@@ -46,6 +46,7 @@ function App() {
   const certifications = [
     'CompTIA A+',
     'CompTIA Network+',
+    'Cyber Defense Pro',
     'CompTIA Security+ (In Progress)',
     'CEH (Planned)'
   ];
