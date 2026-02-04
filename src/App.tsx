@@ -3,6 +3,9 @@ import './App.css';
 
 function App() {
   const [terminalText, setTerminalText] = useState('');
+  const [showConnection, setShowConnection] = useState(false);
+  const [showEncryption, setShowEncryption] = useState(false);
+  const [showAuthentication, setShowAuthentication] = useState(false);
   const [currentSection, setCurrentSection] = useState('home');
   
   const fullText = '> Initializing secure connection...';
@@ -15,6 +18,9 @@ function App() {
         index++;
       } else {
         clearInterval(timer);
+        setTimeout(() => setShowConnection(true), 500);
+        setTimeout(() => setShowEncryption(true), 1000);
+        setTimeout(() => setShowAuthentication(true), 1500);
       }
     }, 50);
     
@@ -105,10 +111,10 @@ function App() {
               <span className="terminal-title">security_analyst.sh</span>
             </div>
             <div className="terminal-body">
-              <p className="terminal-line">{terminalText}<span className="cursor">_</span></p>
-              <p className="terminal-line success">✓ Connection established</p>
-              <p className="terminal-line">✓ Encryption: AES-256</p>
-              <p className="terminal-line">✓ Authentication: Multi-factor</p>
+              <p className="terminal-line-typing">{terminalText}<span className="cursor">_</span></p>
+              {showConnection && <p className="terminal-line success">✓ Connection established</p>}
+              {showEncryption && <p className="terminal-line"> &gt; Encryption: AES-256</p>}
+              {showAuthentication && <p className="terminal-line"> &gt; Authentication: Multi-factor</p>}
             </div>
           </div>
           
