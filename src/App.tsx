@@ -37,16 +37,17 @@ function App() {
   ];
 
   const skills = [
-    'Network Security', 'Penetration Testing', 'SIEM', 'Incident Response',
+    'Network Security', 'SIEM', 'Incident Response',
     'Python', 'Linux', 'Wireshark', 'Metasploit', 'Nmap', 'Burp Suite',
-    'Cloud Security', 'Threat Intelligence', 'Security Auditing'
+    'Cloud Security', 'Threat Intelligence', 'Security Auditing', 
+    'Log Analysis'
   ];
 
   const certifications = [
     'CompTIA A+',
     'CompTIA Network+',
-    'CompTIA Security+ (In Progress)'
-
+    'CompTIA Security+ (In Progress)',
+    'CEH (Planned)'
   ];
 
   return (
