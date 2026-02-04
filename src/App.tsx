@@ -44,11 +44,26 @@ function App() {
   ];
 
   const certifications = [
-    'CompTIA A+',
-    'CompTIA Network+',
-    'Cyber Defense Pro',
-    'CompTIA Security+ (In Progress)',
-    'CEH (Planned)'
+    {
+      name: 'CompTIA A+',
+      url: 'https://www.comptia.org/en-us/certifications/a/core-1-and-2-v15/'
+    },
+    {
+      name: 'CompTIA Network+',
+      url: 'https://www.comptia.org/en-us/certifications/network/'
+    },
+    {
+      name: 'Cyber Defense Pro',
+      url: 'https://www.comptia.org/en-us/certifications/cyber-defense-pro/' // replace with real link if it has one
+    },
+    {
+      name: 'CompTIA Security+ (In Progress)',
+      url: 'https://www.comptia.org/en-us/certifications/security/'
+    },
+    {
+      name: 'CEH (Planned)',
+      url: 'https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/'
+    }
   ];
 
   return (
@@ -164,7 +179,10 @@ function App() {
               <ul className="cert-list">
                 {certifications.map((cert, index) => (
                   <li key={index}>
-                    <span className="cert-icon">▸</span> {cert}
+                    <span className="cert-icon">▸</span>{' '}
+                    <a href={cert.url} target="_blank" rel="noopener noreferrer">
+                      {cert.name}
+                    </a>
                   </li>
                 ))}
               </ul>
