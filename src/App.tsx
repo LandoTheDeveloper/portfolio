@@ -583,6 +583,11 @@ function App() {
                           <span className="btn-icon">🚀</span> Live Demo
                         </a>
                       )}
+                      <div className="button-container-right">
+                        <button className="btn-secondary" onClick={() => setCurrentSection('projects')}>
+                          <span className="arrow">←</span> Back to Projects
+                        </button>
+                      </div>
                     </div>
                   )}
                 </div>
@@ -590,6 +595,7 @@ function App() {
             );
           })()}
         </section>
+        
       )}
 
       {/* Contact Section */}

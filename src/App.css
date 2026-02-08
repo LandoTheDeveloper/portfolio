@@ -372,6 +372,12 @@ body {
   transform: translateY(-2px);
 }
 
+.button-container-right {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
 .scan-line {
   position: absolute;
   width: 100%;
@@ -979,7 +985,6 @@ section {
 .detail-links {
   display: flex;
   gap: 1.5rem;
-  margin-top: 3rem;
   padding-top: 2rem;
   border-top: 1px solid var(--border);
 }
