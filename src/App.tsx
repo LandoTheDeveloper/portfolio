@@ -431,11 +431,11 @@ function App() {
           <button onClick={() => setCurrentSection('projects')} className={currentSection === 'projects' ? 'active' : ''}>
             <span className="nav-icon">#</span>projects
           </button>
-          <button onClick={() => setCurrentSection('contact')} className={currentSection === 'contact' ? 'active' : ''}>
-            <span className="nav-icon">&gt;</span>contact
-          </button>
           <button onClick={() => setCurrentSection('competitions')} className={currentSection === 'competitions' ? 'active' : ''}>
             <span className="nav-icon">%</span>competitions
+          </button>
+          <button onClick={() => setCurrentSection('contact')} className={currentSection === 'contact' ? 'active' : ''}>
+            <span className="nav-icon">&gt;</span>contact
           </button>
         </div>
       </nav>
