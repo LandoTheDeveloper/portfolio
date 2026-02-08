@@ -1300,6 +1300,16 @@ section {
   }
 }
 
+.cta-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  min-width: 180px; /* Ensures consistent width */
+}
 
-
-
+.cta-buttons button,
+.cta-buttons a {
+  flex: 1; /* Makes them all grow equally */
+  min-width: 180px; /* Or whatever minimum width you prefer */
+}

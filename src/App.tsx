@@ -393,6 +393,15 @@ function App() {
               <button className="btn-secondary" onClick={() => setCurrentSection('contact')}>
                 <span className="btn-icon">📧</span> Get In Touch
               </button>
+              <a href="https://github.com/landothedeveloper" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                <span className="btn-icon">💻</span> GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/landon-craft/" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                <span className="btn-icon">💼</span> LinkedIn
+              </a>
+              <a href="https://drive.google.com/uc?export=download&id=1Zo8ntVVsuqAHgtYVmsv-8RVCTL39kju6" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                <span className="btn-icon">📄</span> Resume
+              </a>
             </div>
           </div>
           
