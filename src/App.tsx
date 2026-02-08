@@ -31,6 +31,84 @@ function App() {
     window.scrollTo(0, 0);
   }, [currentSection]);
 
+
+  const competitions = [
+  {
+    id: 1,
+    name: 'Horse Plinko Cyber Competition (HPPC)',
+    year: '2024',
+    type: 'Blue Team Defense',
+    format: 'Team Event',
+    description: 'Live blue team defense competition where teams hardened systems against active red team attacks in real-time.',
+    role: 'Blue Team Defender',
+    
+    overview: 'Participated in a hands-on blue team exercise simulating real-world cyberattacks. Worked collaboratively to identify vulnerabilities, implement defensive measures, and maintain system integrity under active attack conditions.',
+    
+    challenges: [
+      'System hardening under pressure from live red team attacks',
+      'Real-time threat detection and incident response',
+      'Network segmentation and access control implementation',
+      'Log analysis and attack pattern recognition',
+      'Collaborative defense strategy with team coordination'
+    ],
+    
+    skills: [
+      'System Hardening',
+      'Incident Response',
+      'Network Defense',
+      'Log Analysis',
+      'Threat Detection',
+      'Team Coordination',
+      'Security Configuration'
+    ],
+    
+    keyTakeaways: [
+      'Gained practical experience defending against real attackers in high-pressure scenarios',
+      'Learned to prioritize critical vulnerabilities when time and resources are limited',
+      'Developed effective team communication strategies for coordinated defense',
+      'Applied theoretical security knowledge to real-world defensive operations',
+      'Built confidence in making rapid security decisions under attack conditions'
+    ]
+  },
+  {
+    id: 2,
+    name: 'NCAE Cyber Games',
+    year: '2024',
+    type: 'Beginner-Focused CTF',
+    format: 'Team Event',
+    description: 'National Centers of Academic Excellence in Cybersecurity competition designed for first-time competitors to learn cyber competition fundamentals in a supportive environment.',
+    role: 'Competitor',
+    
+    overview: 'Competed in a beginner-friendly national cybersecurity competition focused on skill development and confidence building. Tackled diverse challenges across multiple security domains while learning competition strategies and teamwork.',
+    
+    challenges: [
+      'Multi-domain cybersecurity challenges (web, crypto, forensics, etc.)',
+      'Time-boxed problem solving under competition conditions',
+      'Collaborative challenge solving with teammates',
+      'Learning new tools and techniques on-the-fly',
+      'Building foundational CTF competition skills'
+    ],
+    
+    skills: [
+      'CTF Methodologies',
+      'Web Security',
+      'Cryptography',
+      'Digital Forensics',
+      'Problem Solving',
+      'Team Collaboration',
+      'Tool Proficiency'
+    ],
+    
+    keyTakeaways: [
+      'Gained foundational experience in competitive cybersecurity environments',
+      'Learned structured approaches to solving multi-domain security challenges',
+      'Developed resilience and adaptability when facing unfamiliar problems',
+      'Built confidence to pursue more advanced competitions',
+      'Discovered personal strengths across different cybersecurity domains'
+    ]
+  }
+];
+
   const projects = [
     {
       id: 1,
@@ -327,7 +405,8 @@ function App() {
     {
       name: 'CEH (Planned)',
       url: 'https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/'
-    }
+    },
+    
   ];
 
   return (
@@ -354,6 +433,9 @@ function App() {
           </button>
           <button onClick={() => setCurrentSection('contact')} className={currentSection === 'contact' ? 'active' : ''}>
             <span className="nav-icon">&gt;</span>contact
+          </button>
+          <button onClick={() => setCurrentSection('competitions')} className={currentSection === 'competitions' ? 'active' : ''}>
+            <span className="nav-icon">%</span>competitions
           </button>
         </div>
       </nav>
@@ -497,7 +579,7 @@ function App() {
       )}
 
       {/* Smart Stock Project Detail */}
-      {currentSection !== 'home' && currentSection !== 'about' && currentSection !== 'projects' && currentSection !== 'contact' && (
+      {currentSection !== 'home' && currentSection !== 'about' && currentSection !== 'projects' && currentSection !== 'contact' && currentSection !== 'competitions' && (
         <section className="project-detail">
           <button className="back-button" onClick={() => setCurrentSection('projects')}>
             <span className="arrow">←</span> Back to Projects
@@ -707,6 +789,64 @@ function App() {
           })()}
         </section>
         
+      )}
+
+      {/* Competitions Section */}
+      {currentSection === 'competitions' && (
+        <section className="competitions">
+          <div className="section-header">
+            <h2><span className="prompt">%</span> ls -la ./competitions</h2>
+            <div className="header-line"></div>
+          </div>
+          
+          <div className="competitions-grid">
+            {competitions.map((comp, index) => (
+              <div key={index} className="competition-card" style={{animationDelay: `${index * 0.15}s`}}>
+                <div className="competition-header">
+                  <div>
+                    <h3>{comp.name}</h3>
+                    <p className="competition-meta">
+                      <span className="year-badge">{comp.year}</span>
+                      <span className="type-badge">{comp.type}</span>
+                      <span className="format-badge">{comp.format}</span>
+                    </p>
+                  </div>
+                </div>
+                
+                <p className="competition-description">{comp.description}</p>
+                
+                <div className="competition-details">
+                  <div className="detail-block">
+                    <h4>🎯 Key Challenges</h4>
+                    <ul>
+                      {comp.challenges.map((challenge, i) => (
+                        <li key={i}>{challenge}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div className="detail-block">
+                    <h4>🔧 Skills Demonstrated</h4>
+                    <div className="skills-grid">
+                      {comp.skills.map((skill, i) => (
+                        <span key={i} className="skill-tag">{skill}</span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="detail-block">
+                    <h4>💡 Key Takeaways</h4>
+                    <ul>
+                      {comp.keyTakeaways.map((takeaway, i) => (
+                        <li key={i}>{takeaway}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       )}
 
       {/* Contact Section */}

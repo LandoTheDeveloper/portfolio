@@ -1313,3 +1313,115 @@ section {
   flex: 1; /* Makes them all grow equally */
   min-width: 180px; /* Or whatever minimum width you prefer */
 }
+
+/* Competitions Section */
+.competitions {
+  padding: 6rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.competitions-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.competition-card {
+  background: rgba(0, 255, 159, 0.03);
+  border: 1px solid rgba(0, 255, 159, 0.2);
+  border-radius: 8px;
+  padding: 2rem;
+  animation: slideUp 0.6s ease-out;
+  transition: all 0.3s ease;
+}
+
+.competition-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 255, 159, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 255, 159, 0.1);
+}
+
+.competition-header {
+  margin-bottom: 1.5rem;
+}
+
+.competition-header h3 {
+  color: #00ff9f;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.competition-meta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.year-badge,
+.type-badge,
+.format-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.year-badge {
+  background: rgba(0, 255, 159, 0.1);
+  border: 1px solid rgba(0, 255, 159, 0.3);
+  color: #00ff9f;
+}
+
+.type-badge {
+  background: rgba(100, 200, 255, 0.1);
+  border: 1px solid rgba(100, 200, 255, 0.3);
+  color: #64c8ff;
+}
+
+.format-badge {
+  background: rgba(255, 159, 0, 0.1);
+  border: 1px solid rgba(255, 159, 0, 0.3);
+  color: #ff9f00;
+}
+
+.competition-description {
+  color: #a0a0a0;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.competition-details {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.detail-block h4 {
+  color: #00ff9f;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detail-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.detail-block ul li {
+  color: #c0c0c0;
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.detail-block ul li:before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #00ff9f;
+}
