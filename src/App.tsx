@@ -9,6 +9,8 @@ function App() {
   const [currentSection, setCurrentSection] = useState('home');
   
   const fullText = '> Initializing secure connection...';
+
+  const RESUME_FILE_ID = "1L6PMjM96zToZFfvoyXoxV2D9AKHfxP0v";
   
   useEffect(() => {
     let index = 0;
@@ -481,9 +483,9 @@ function App() {
               <a href="https://www.linkedin.com/in/landon-craft/" target="_blank" rel="noopener noreferrer" className="btn-secondary">
                 <span className="btn-icon">💼</span> LinkedIn
               </a>
-              <a href="https://drive.google.com/uc?export=download&id=1Zo8ntVVsuqAHgtYVmsv-8RVCTL39kju6" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <a href={`https://drive.google.com/uc?export=download&id=${RESUME_FILE_ID}`} target="_blank" rel="noopener noreferrer" className="btn-primary">
                 <span className="btn-icon">📄</span> Resume
-              </a>
+              </a>   
             </div>
           </div>
           
