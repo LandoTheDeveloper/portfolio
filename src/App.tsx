@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 const RESUME_FILE_ID = "1L6PMjM96zToZFfvoyXoxV2D9AKHfxP0v";
