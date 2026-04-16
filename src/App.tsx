@@ -11,7 +11,7 @@ function App() {
 
   const fullText = '> Building scalable software systems...';
 
-  const RESUME_FILE_ID = "1L6PMjM96zToZFfvoyXoxV2D9AKHfxP0v";
+  const RESUME_FILE_ID = "1MWk9Q3cbY8W64NpEkhheEvZJrCyHLJil";
 
   useEffect(() => {
     let index = 0;
