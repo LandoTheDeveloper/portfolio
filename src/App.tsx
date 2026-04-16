@@ -900,7 +900,7 @@ function checkPasswordStrength(password) {
               <div className="terminal-body">
                 <p className="terminal-line success">✓ Available for opportunities</p>
                 <p className="terminal-line"> &gt; Role: New Grad SWE / Full-Stack</p>
-                <p className="terminal-line"> &gt; Location: Open to remote / relocation</p>
+                <p className="terminal-line"> &gt; Location: Open to remote, Orlando, or relocation</p>
                 <p className="terminal-line"> &gt; Stack: MERN, Python, REST APIs</p>
                 <p className="terminal-line success"> &gt; Response time: &lt; 24hrs</p>
               </div>
