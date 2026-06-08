@@ -96,3 +96,22 @@
   padding: 4px 10px;
   border-radius: 4px;
 }
+
+.heroGrid {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  flex: 1;
+}
+
+.headshot {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+  order: 3;
+  transform: translateY(100px);
+}
