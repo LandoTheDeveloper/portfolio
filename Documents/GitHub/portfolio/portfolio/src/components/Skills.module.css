@@ -1,0 +1,52 @@
+.section {
+  padding: 64px 32px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink3);
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+.h2 {
+  font-family: var(--serif);
+  font-size: clamp(26px, 4vw, 36px);
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.group {
+  background: var(--surf);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.groupTitle {
+  font-size: 11px;
+  font-family: var(--mono);
+  color: var(--ink3);
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.item {
+  font-size: 13px;
+  color: var(--ink2);
+}
