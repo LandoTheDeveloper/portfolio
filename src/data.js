@@ -1,10 +1,10 @@
 export const personal = {
   name: "Landon Craft",
-  tagline: "Building things that actually work.",
+  tagline: "Securing what actually matters",
   taglineEmphasis: "actually",
-  bio: "Software engineer with a CS degree from University of Central Florida. I enjoy turning complex problems into clean, reliable systems, whether that's a web app, an API, or a data pipeline.",
-  bioExtra: "I'm looking for full-stack or backend roles at companies where engineering quality is taken seriously.",
-  availability: "AVAILABLE FOR FULL-TIME ROLES",
+  bio: "I hold a B.S. in Computer Science with a minor in Secure Computing and Networking from the University of Central Florida, and I've applied to the M.S. in Cybersecurity (Thesis Track) program at the University of North Florida, with the goal of continuing on to a Ph.D. and a career in academic security research.",
+  bioExtra: "I'm starting a cloud/cybersecurity role at CSX focused on cyber resiliency, SIEM, and AI-driven security automation. My research interests center on quantum-resistant cryptography and cloud security.",
+  availability: "Starting at CSX · Applying to UNF MS-CIS",
   email: "landoncraftbiz@gmail.com",
   github: "https://github.com/LandoTheDeveloper",
   linkedin: "https://linkedin.com/in/landon-craft",
@@ -14,13 +14,33 @@ export const personal = {
 export const about = {
   education: "B.S. Computer Science — University of Central Florida, 2026",
   gpa: "3.7 / 4.0",
-  location: "Orlando, FL · Open to remote",
-  status: "Actively interviewing",
+  location: "Jacksonville, FL",
+  status: "Starting at CSX · MS-CIS Applicant, UNF",
 };
 
 export const coreStack = [
    "Java", "C", "Python", "React", "TypeScript", "Node.js",  "PostgreSQL", "Docker", "AWS",
 ];
+
+export const research = {
+  heading: "RESEARCH INTERESTS",
+  intro: "I'm pursuing a thesis-track MS at UNF aimed at a PhD and academic career in cybersecurity research.",
+  areas: [
+    {
+      title: "Quantum-Resistant Cryptography",
+      description: "Migration strategies for cryptographic infrastructure as post-quantum standards move from specification to deployment, including hybrid schemes and performance tradeoffs in constrained environments.",
+    },
+    {
+      title: "IoT Security",
+      description: "Securing resource-constrained and embedded devices against firmware, protocol, and network-level attacks as IoT deployments scale in critical infrastructure and industrial environments.",
+    },
+    {
+      title: "AI-Augmented Security Operations",
+      description: "Applying ML and automation to SIEM pipelines and incident response without expanding attack surface or eroding analyst judgment.",
+    },
+  ],
+  note: "Currently in conversation with UNF faculty about thesis advising in these areas.",
+}
 
 export const projects = [
   {
